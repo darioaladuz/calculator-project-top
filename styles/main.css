@@ -16,57 +16,61 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #8DCFFF;
+  background: #222f3e;
 }
 
 body #calculator-container {
-  height: 500px;
-  width: 340px;
   border: 1px solid black;
-  padding: 5px;
-  border-radius: 6px;
-  -webkit-box-shadow: -5px 5px 10px rgba(246, 255, 141, 0.5), 5px 5px 10px rgba(255, 172, 141, 0.5), -5px -5px 10px rgba(246, 255, 141, 0.5), 5px -5px 10px rgba(255, 172, 141, 0.5), 0 0 15px 5px white;
-          box-shadow: -5px 5px 10px rgba(246, 255, 141, 0.5), 5px 5px 10px rgba(255, 172, 141, 0.5), -5px -5px 10px rgba(246, 255, 141, 0.5), 5px -5px 10px rgba(255, 172, 141, 0.5), 0 0 15px 5px white;
+  padding: 30px;
+  border-radius: 12px;
+  background: #8395a7;
 }
 
-body #calculator-container input {
-  padding: 20px;
+body #calculator-container #calc-value {
   width: 100%;
-  font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  font-size: 24px;
   text-align: right;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  -webkit-box-shadow: 0 0 5px rgba(240, 0, 0, 0.5);
-          box-shadow: 0 0 5px rgba(240, 0, 0, 0.5);
 }
 
-body #calculator-container input:focus {
+body #calculator-container #calc-value:focus {
   outline: none;
 }
 
 body #calculator-container #buttons {
-  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 7.5px;
 }
 
 body #calculator-container #buttons button {
-  height: 80px;
-  width: 80px;
+  padding: 30px;
   font-size: 25px;
-  float: left;
-  margin: 1px;
-  background: rgba(246, 255, 141, 0.75);
+  border-radius: 4px;
+  border: none;
+  background: #576574;
+  color: #fff;
+  text-shadow: 0 0 2.5px white;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0px 0px 5px rgba(255, 255, 255, 0.75);
+          box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0px 0px 5px rgba(255, 255, 255, 0.75);
+}
+
+body #calculator-container #buttons button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body #calculator-container #buttons button:focus {
   outline: none;
 }
 
-body #calculator-container #buttons .button0 {
-  width: 162px;
-}
-
-body #calculator-container #buttons .button-result {
-  background: rgba(255, 172, 141, 0.75);
+body #calculator-container #buttons .result {
+  width: 207%;
 }
 /*# sourceMappingURL=main.css.map */

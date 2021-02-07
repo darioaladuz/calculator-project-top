@@ -9,25 +9,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #8DCFFF;
+    background: #222f3e;
 
     #calculator-container {
-        height: 500px;
-        width: 340px;
         border: 1px solid black;
-        padding: 5px;
-        border-radius: 6px;
-        box-shadow: -5px 5px 10px rgba(246, 355, 141, .5), 5px 5px 10px rgba(255, 172, 141, .5), -5px -5px 10px rgba(246, 355, 141, .5), 5px -5px 10px rgba(255,172,141,.5), 0 0 15px 5px white;
+        padding: 30px;
+        border-radius: 12px;
+        background: #8395a7;
 
-        input {
-            padding: 20px;
+        #calc-value {
             width: 100%;
-            font-size: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            font-size: 24px;
             text-align: right;
-            border-radius: 6px;
+            border-radius: 8px;
             border: none;
-            box-shadow: 0 0 5px rgba(240, 0,0,.5);
 
             &:focus {
                 outline: none;
@@ -35,27 +32,32 @@ body {
         }
 
         #buttons {
-            width: 100%;
-            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7.5px;
+
             button {
-                height: 80px;
-                width: 80px;
+                padding: 30px;
                 font-size: 25px;
-                float: left;
-                margin: 1px;
-                background: rgba(246, 355, 141, .75);
+                border-radius: 4px;
+                border: none;
+                background: #576574;
+                color: #fff;
+                text-shadow: 0 0 2.5px white;
+                cursor: pointer;
+                box-shadow: 0px 0px 5px rgba(255,255,255,.5), 0px 0px 5px rgba(255,255,255,.75);
+                
+                &:hover {
+                    box-shadow: none;
+                }
 
                 &:focus {
                     outline: none;
                 }
             }
 
-            .button0 {
-                width: 162px;
-            }
-
-            .button-result {
-                background: rgba(255,172,141,.75);
+            .result {
+                width: 207%;
             }
         }
     }
