@@ -18,8 +18,12 @@ function divide(...numbers) {
     return result.reduce((a, b) => a / b);
 }
 
-function convert(value) {
-    return value * (-1);
+function convert() {
+    const convertButton = document.querySelector('.button-convert');
+    const input = document.querySelector('#calc-value');
+    convertButton.addEventListener('click', () => {
+        input.value *= -1;
+    });
 }
 
 function percent(value) {
@@ -50,7 +54,22 @@ function buttonPress() {
     }))
 }
 
+function operate() {
+    const add = document.querySelector('.button-add');
+    const input = document.querySelector('#calc-value')
+    add.addEventListener('click', () => {
+        let num1 = input.value;
+        input.value = "";
+        const result = document.querySelector('.button-result');
+        result.addEventListener('click', () => {
+            input.value = Number(num1) + Number(input.value);
+            num1 = 0;
+        })
+    })
+}
 
 
 buttonPress();
 clear();
+convert();
+operate();
